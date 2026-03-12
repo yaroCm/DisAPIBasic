@@ -29,7 +29,7 @@ db.connect(err => {
 
 // 1. Obtener todos los registros (GET)
 app.get('/api/datos', (req, res) => {
-    const query = "SELECT * FROM Usr"; // Cambia 'tabla_perros' por tu tabla
+    const query = "SELECT * FROM usr"; // Cambia 'tabla_perros' por tu tabla
     db.query(query, (err, results) => {
         if (err) return res.status(500).send(err);
         res.json(results);
