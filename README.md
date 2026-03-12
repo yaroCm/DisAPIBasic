@@ -22,3 +22,5 @@ Run with
 ```bash
   npm run dev 
 ```
+
+Go to: [http://localhost:3000/api/datos/](http://localhost:3000/api/datos/)
