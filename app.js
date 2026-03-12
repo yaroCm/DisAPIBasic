@@ -1,7 +1,7 @@
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
-require('dotenv').config(); // Para manejar credenciales seguras
+require('dotenv').config(); 
 
 const app = express();
 app.use(cors());
@@ -27,9 +27,8 @@ db.connect(err => {
 
 // --- RUTAS DE LA API ---
 
-// 1. Obtener todos los registros (GET)
 app.get('/api/datos', (req, res) => {
-    const query = "SELECT * FROM usr"; // Cambia 'tabla_perros' por tu tabla
+    const query = "SELECT * FROM usr"; 
     db.query(query, (err, results) => {
         if (err) return res.status(500).send(err);
         res.json(results);
